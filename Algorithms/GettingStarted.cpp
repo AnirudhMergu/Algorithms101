@@ -7,7 +7,7 @@ void gettingStarted()
 		system("cls");
 		int ch;
 		entry:
-		printf("\nGetting Started\n\n1. Insertion Sort\n2. Selection Sort\n3. Merge Sort\n4. Linear Search\n0. Previous Menu\n\nEnter your choice : ");
+		printf("\nGetting Started\n\n1. Insertion Sort\n2. Selection Sort\n3. Bubble Sort\n4. Merge Sort\n5. Linear Search\n0. Previous Menu\n\nEnter your choice : ");
 		scanf("%d", &ch);
 
 		if (!ch)
@@ -38,15 +38,18 @@ void gettingStarted()
 			selectionSort(arr, n);
 			break;
 		case 3:
-			mergeSort(arr, n);
+			bubbleSort(arr, n);
 			break;
 		case 4:
+			mergeSort(arr, n);
+			break;
+		case 5:
 			int key;
 			printf("\nEnter the element to search for : ");
 			scanf("%d", &key);
 			linearSearch(arr, n, key);
 			break;
-		case 5:
+		default:
 			printf("\n\nNot yet implemented :(\n");
 			printf("Want to choose other option (1 for Yes and 0 for No) : ");
 			scanf("%d", &ch);
@@ -54,8 +57,6 @@ void gettingStarted()
 				goto entry;
 			else
 				return;
-			break;
-		default:
 			break;
 		}
 
