@@ -37,13 +37,15 @@ void gettingStarted()
 		case 2:
 			selectionSort(arr, n);
 			break;
+		case 3:
+			mergeSort(arr, n);
+			break;
 		case 4:
 			int key;
 			printf("\nEnter the element to search for : ");
 			scanf("%d", &key);
 			linearSearch(arr, n, key);
 			break;
-		case 3:
 		case 5:
 			printf("\n\nNot yet implemented :(\n");
 			printf("Want to choose other option (1 for Yes and 0 for No) : ");
